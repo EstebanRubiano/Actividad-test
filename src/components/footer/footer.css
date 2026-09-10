@@ -1,0 +1,111 @@
+.site-footer {
+  background-color: var(--color-brand-primary-dark);
+  color: var(--color-text-placeholder);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  margin-top: auto;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: var(--spacing-xl);
+  padding-top: var(--spacing-xl);
+  padding-bottom: var(--spacing-xl);
+}
+
+.footer-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-brand {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-bold);
+  letter-spacing: -0.025em;
+  margin-bottom: var(--spacing-sm);
+}
+
+.brand-light {
+  color: var(--color-text-inverse);
+}
+
+.footer-description {
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-base);
+  color: var(--color-text-placeholder);
+  max-width: 380px;
+  margin-bottom: 0;
+}
+
+.footer-title {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-inverse);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: var(--spacing-md);
+}
+
+.footer-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+  padding: 0;
+  margin: 0;
+}
+
+.footer-link,
+.footer-static-item {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-placeholder);
+  transition: color 0.15s ease-in-out;
+}
+
+.footer-link:hover {
+  color: var(--color-text-inverse);
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding-top: var(--spacing-md);
+  padding-bottom: var(--spacing-md);
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.footer-bottom-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--spacing-sm);
+}
+
+.footer-copy,
+.footer-credits {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-placeholder);
+  margin-bottom: 0;
+}
+
+.developer-link {
+  color: var(--color-text-inverse);
+  font-weight: var(--font-weight-semibold);
+  transition: color 0.15s ease-in-out, text-decoration 0.15s ease-in-out;
+}
+
+.developer-link:hover {
+  color: var(--color-status-info);
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+  }
+
+  .footer-bottom-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

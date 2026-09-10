@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Footer</title>
+  <link rel="stylesheet" href="../../styles/variables.css">
+  <link rel="stylesheet" href="../../styles/global.css">
+  <link rel="stylesheet" href="./footer.css">
+</head>
+<body>
+
+  <footer class="site-footer">
+    <div class="container footer-container">
+      
+      <!-- Columna 1: Marca y Propósito -->
+      <div class="footer-col footer-col--brand">
+        <div class="footer-brand">
+          <span class="brand-primary">Tax</span>
+          <span class="brand-light">Manager</span>
+        </div>
+        <p class="footer-description">
+          Plataforma integral de gestión financiera y liquidación automatizada de rentas bajo arquitectura distribuida.
+        </p>
+      </div>
+
+      <!-- Columna 2: Enlaces Rápidos -->
+      <div class="footer-col">
+        <h4 class="footer-title">Navegación</h4>
+        <ul class="footer-list">
+          <li><a href="#presentacion" class="footer-link">Presentación</a></li>
+          <li><a href="#funcionalidades" class="footer-link">Alcance &amp; Declaración</a></li>
+          <li><a href="#buzon-ideas" class="footer-link">Buzón de Ideas</a></li>
+        </ul>
+      </div>
+
+      <!-- Columna 3: Arquitectura & Contacto -->
+      <div class="footer-col">
+        <h4 class="footer-title">Tecnología</h4>
+        <ul class="footer-list">
+          <li><span class="footer-static-item">Microservicios API</span></li>
+          <li><span class="footer-static-item">Motor de Cálculo Fiscal</span></li>
+          <li><span class="footer-static-item">Seguridad &amp; Encriptación</span></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- Barra Inferior -->
+    <div class="footer-bottom">
+      <div class="container footer-bottom-container">
+        <p class="footer-copy">
+          &copy; <span id="current-year"></span> TaxManager. Todos los derechos reservados.
+        </p>
+        <div class="footer-credits">
+          <span>Desarrollado por </span>
+          <a 
+            href="https://github.com/EstebanRubiano" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            class="developer-link"
+            aria-label="Perfil de GitHub de Esteban Rubiano"
+          >
+            Esteban Rubiano
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      // Inyección dinámica de año
+      const yearEl = document.getElementById('current-year');
+      if (yearEl) {
+        yearEl.textContent = new Date().getFullYear();
+      }
+    })();
+  </script>
+
+</body>
+</html>

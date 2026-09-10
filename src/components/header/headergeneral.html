@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Header General</title>
+  <link rel="stylesheet" href="../../styles/variables.css">
+  <link rel="stylesheet" href="../../styles/global.css">
+  <link rel="stylesheet" href="./headergeneral.css">
+</head>
+<body>
+
+  <!-- Marcado equivalente al JSX -->
+  <header class="site-header" id="site-header">
+    <div class="container header-container">
+      
+      <!-- Identificador / Logotipo -->
+      <div class="header-brand">
+        <a href="#" class="brand-link" id="brand-link" aria-label="Página de inicio">
+          <span class="brand-primary">Tax</span>
+          <span class="brand-dark">Manager</span>
+        </a>
+      </div>
+
+      <!-- Botón menú móvil (hamburguesa) -->
+      <button
+        type="button"
+        class="menu-toggle"
+        id="menu-toggle"
+        aria-label="Abrir navegación"
+        aria-expanded="false"
+        aria-controls="primary-navigation"
+      >
+        <span class="menu-bar"></span>
+        <span class="menu-bar"></span>
+        <span class="menu-bar"></span>
+      </button>
+
+      <!-- Navegación a las 3 secciones requeridas -->
+      <nav
+        id="primary-navigation"
+        class="header-nav"
+        aria-label="Navegación principal"
+      >
+        <ul class="nav-list">
+          <li class="nav-item">
+            <a href="#presentacion" class="nav-link">Presentación</a>
+          </li>
+          <li class="nav-item">
+            <a href="#funcionalidades" class="nav-link">Alcance &amp; Declaración</a>
+          </li>
+          <li class="nav-item">
+            <a href="#buzon-ideas" class="nav-link">Buzón de Ideas</a>
+          </li>
+          <li class="nav-item nav-item--cta">
+            <a href="#buzon-ideas" class="btn-cta">Proponer Función</a>
+          </li>
+        </ul>
+      </nav>
+
+    </div>
+  </header>
+
+  <!-- Lógica DOM equivalente al Hook useHeadergeneral -->
+  <script>
+    (function () {
+      const header = document.getElementById('site-header');
+      const toggleBtn = document.getElementById('menu-toggle');
+      const nav = document.getElementById('primary-navigation');
+      const closeElements = header.querySelectorAll('.nav-link, .btn-cta, #brand-link');
+
+      let isMenuOpen = false;
+
+      // Equivalente al scroll listener del Hook
+      const handleScroll = () => {
+        if (window.scrollY > 20) {
+          header.classList.add('site-header--scrolled');
+        } else {
+          header.classList.remove('site-header--scrolled');
+        }
+      };
+
+      // Equivalente a closeMenu
+      const closeMenu = () => {
+        if (!isMenuOpen) return;
+        isMenuOpen = false;
+        nav.classList.remove('header-nav--open');
+        toggleBtn.classList.remove('menu-toggle--active');
+        toggleBtn.setAttribute('aria-expanded', 'false');
+        toggleBtn.setAttribute('aria-label', 'Abrir navegación');
+        document.body.style.overflow = '';
+      };
+
+      // Equivalente a toggleMenu
+      const toggleMenu = () => {
+        isMenuOpen = !isMenuOpen;
+        nav.classList.toggle('header-nav--open', isMenuOpen);
+        toggleBtn.classList.toggle('menu-toggle--active', isMenuOpen);
+        toggleBtn.setAttribute('aria-expanded', String(isMenuOpen));
+        toggleBtn.setAttribute('aria-label', isMenuOpen ? 'Cerrar navegación' : 'Abrir navegación');
+        document.body.style.overflow = isMenuOpen ? 'hidden' : '';
+      };
+
+      // Control de viewport resize
+      const handleResize = () => {
+        if (window.innerWidth > 768 && isMenuOpen) {
+          closeMenu();
+        }
+      };
+
+      // Event Listeners
+      window.addEventListener('scroll', handleScroll, { passive: true });
+      window.addEventListener('resize', handleResize);
+      toggleBtn.addEventListener('click', toggleMenu);
+      closeElements.forEach(el => el.addEventListener('click', closeMenu));
+    })();
+  </script>
+
+</body>
+</html>

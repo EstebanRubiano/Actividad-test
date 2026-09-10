@@ -1,0 +1,199 @@
+.site-header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--color-bg-base);
+  border-bottom: 1px solid var(--border-color-default);
+  z-index: 1000;
+  transition: box-shadow 0.2s ease-in-out, background-color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+}
+
+.site-header--scrolled {
+  background-color: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(8px);
+  box-shadow: var(--shadow-card);
+  border-bottom-color: var(--border-color-light);
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 4.5rem;
+}
+
+/* Marca / Logo */
+.brand-link {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-tight);
+  letter-spacing: -0.025em;
+  display: inline-block;
+}
+
+.brand-primary {
+  color: var(--color-brand-primary);
+}
+
+.brand-dark {
+  color: var(--color-brand-primary-dark);
+}
+
+/* Lista de enlaces */
+.nav-list {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-lg);
+  margin: 0;
+  padding: 0;
+}
+
+.nav-link {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-body);
+  position: relative;
+  padding: var(--spacing-xs) 0;
+  transition: color 0.15s ease-in-out;
+}
+
+.nav-link:hover {
+  color: var(--color-brand-primary);
+}
+
+.nav-link--active {
+  color: var(--color-brand-primary);
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--color-brand-primary);
+  transition: width 0.2s ease-in-out;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+.nav-link--active::after {
+  width: 100%;
+}
+
+/* Botón CTA dentro de navegación */
+.btn-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-sm) var(--spacing-md);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-cta-contrast);
+  background-color: var(--color-cta);
+  border-radius: var(--radius-sm);
+  transition: background-color 0.15s ease-in-out, transform 0.1s ease-in-out;
+}
+
+.btn-cta:hover {
+  background-color: var(--color-cta-hover);
+  color: var(--color-cta-contrast);
+}
+
+.btn-cta:active {
+  transform: translateY(1px);
+}
+
+/* Botón Hamburguesa */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 28px;
+  height: 20px;
+  padding: 0;
+  z-index: 1001;
+}
+
+.menu-bar {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: var(--color-text-title);
+  border-radius: var(--radius-sm);
+  transition: transform 0.2s ease-in-out, opacity 0.2s ease-in-out;
+}
+
+/* Adaptabilidad para móviles */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: flex;
+  }
+
+  .header-nav {
+    position: fixed;
+    top: 4.5rem;
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 4.5rem);
+    background-color: var(--color-bg-base);
+    border-top: 1px solid var(--border-color-default);
+    padding: var(--spacing-xl) var(--spacing-md);
+    transform: translateX(100%);
+    opacity: 0;
+    visibility: hidden;
+    transition: transform 0.25s ease-in-out, opacity 0.2s ease-in-out, visibility 0.25s;
+    overflow-y: auto;
+  }
+
+  .header-nav--open {
+    transform: translateX(0);
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .nav-list {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--spacing-lg);
+    width: 100%;
+  }
+
+  .nav-item {
+    width: 100%;
+  }
+
+  .nav-link {
+    display: block;
+    font-size: var(--font-size-lg);
+    width: 100%;
+    padding: var(--spacing-sm) 0;
+  }
+
+  .nav-item--cta {
+    margin-top: var(--spacing-md);
+  }
+
+  .btn-cta {
+    width: 100%;
+    padding: var(--spacing-md);
+    text-align: center;
+  }
+
+  /* Animación a 'X' del botón hamburguesa */
+  .menu-toggle--active .menu-bar:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+  }
+
+  .menu-toggle--active .menu-bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .menu-toggle--active .menu-bar:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
+  }
+}

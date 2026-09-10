@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TaxManager | Gestor Financiero y Motor de Renta</title>
+  <link rel="stylesheet" href="../../styles/variables.css">
+  <link rel="stylesheet" href="../../styles/global.css">
+  <link rel="stylesheet" href="../../components/header/headergeneral.css">
+  <link rel="stylesheet" href="../../components/footer/footer.css">
+  <link rel="stylesheet" href="./home.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header" id="site-header">
+    <div class="container header-container">
+      <div class="header-brand">
+        <a href="#" class="brand-link" id="brand-link" aria-label="Página de inicio">
+          <span class="brand-primary">Tax</span>
+          <span class="brand-dark">Manager</span>
+        </a>
+      </div>
+
+      <button
+        type="button"
+        class="menu-toggle"
+        id="menu-toggle"
+        aria-label="Abrir navegación"
+        aria-expanded="false"
+        aria-controls="primary-navigation"
+      >
+        <span class="menu-bar"></span>
+        <span class="menu-bar"></span>
+        <span class="menu-bar"></span>
+      </button>
+
+      <nav
+        id="primary-navigation"
+        class="header-nav"
+        aria-label="Navegación principal"
+      >
+        <ul class="nav-list">
+          <li class="nav-item">
+            <a href="#presentacion" class="nav-link">Presentación</a>
+          </li>
+          <li class="nav-item">
+            <a href="#funcionalidades" class="nav-link">Alcance &amp; Declaración</a>
+          </li>
+          <li class="nav-item">
+            <a href="#buzon-ideas" class="nav-link">Buzón de Ideas</a>
+          </li>
+          <li class="nav-item nav-item--cta">
+            <a href="#buzon-ideas" class="btn-cta">Proponer Función</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- CONTENIDO PRINCIPAL -->
+  <main id="main-content">
+    
+    <!-- 1. Presentación -->
+    <section id="presentacion" class="home-section">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <span class="section-tag">Arquitectura Distribuida</span>
+          <h1 class="hero-title">Automatización Fiscal y Gestión Financiera</h1>
+          <p class="hero-lead">
+            Solución fintech orientada a desacoplar el cálculo contable tradicional mediante microservicios independientes. Resuelve la complejidad de la declaración de renta y centraliza la salud financiera de personas y empresas.
+          </p>
+          <div class="hero-metrics">
+            <div class="metric-item">
+              <strong>100%</strong>
+              <span>Parametrizable a normas DIAN</span>
+            </div>
+            <div class="metric-item">
+              <strong>O(1)</strong>
+              <span>Cálculo tributario reactivo</span>
+            </div>
+            <div class="metric-item">
+              <strong>REST/gRPC</strong>
+              <span>Interconexión de servicios</span>
+            </div>
+          </div>
+        </div>
+        <div class="hero-image-wrapper">
+          <img 
+            src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=800&q=80" 
+            alt="Visualización analítica de balance contable y finanzas" 
+            class="hero-image"
+            loading="lazy"
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. Funcionalidades -->
+    <section id="funcionalidades" class="home-section home-section--alt">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Alcance Técnico</span>
+          <h2>Capacidades del Sistema</h2>
+          <p class="section-desc">Ecosistema modular de servicios financieros independientes.</p>
+        </div>
+
+        <div class="features-grid">
+          <article class="feature-card feature-card--highlight">
+            <span class="feature-badge">Módulo Crítico</span>
+            <h3>Motor de Renta Persona Natural</h3>
+            <p>Clasificación automatizada por cédulas (laborales, capital, no laborales, pensiones y dividendos).</p>
+            <ul class="feature-details">
+              <li>Depuración paramétrica de renta líquida</li>
+              <li>Validación de topes de ingresos y patrimonio</li>
+              <li>Generación borrador Formulario 210</li>
+            </ul>
+          </article>
+
+          <article class="feature-card">
+            <h3>Ingesta y Conciliación Bancaria</h3>
+            <p>Mapeo desatendido de extractos bancarios y certificados tributarios mediante parsers asíncronos.</p>
+            <ul class="feature-details">
+              <li>Procesamiento de formatos CSV, XLS y PDF estructurado</li>
+              <li>Reglas automáticas de categorización de gastos</li>
+              <li>Auditoría cruzada de saldos al 31 de diciembre</li>
+            </ul>
+          </article>
+
+          <article class="feature-card">
+            <h3>Score Fiscal Preventivo</h3>
+            <p>Simulador continuo que proyecta el impuesto a cargo con cada movimiento registrado.</p>
+            <ul class="feature-details">
+              <li>Alertas tempranas de superación de umbrales</li>
+              <li>Optimización legal de deducciones y rentas exentas</li>
+              <li>Cálculo en tiempo real de retenciones en la fuente</li>
+            </ul>
+          </article>
+
+          <article class="feature-card">
+            <h3>Pipeline de Facturación Electrónica</h3>
+            <p>Conexión directa con proveedores autorizados para consolidación de compras y ventas.</p>
+            <ul class="feature-details">
+              <li>Validación de firmas digitales y XML (UBL 2.1)</li>
+              <li>Deducción instantánea de IVA y retenciones asumidas</li>
+              <li>Monitoreo de estado de validación previa</li>
+            </ul>
+          </article>
+
+          <article class="feature-card">
+            <h3>Planeación Financiera &amp; Forecast</h3>
+            <p>Modelado matemático predictivo para presupuestos personales y proyecciones de flujo de caja.</p>
+            <ul class="feature-details">
+              <li>Análisis de varianza de gasto mensual</li>
+              <li>Estimación de capital de trabajo disponible</li>
+              <li>Estrategias de amortización de pasivos</li>
+            </ul>
+          </article>
+
+          <article class="feature-card">
+            <h3>Bóveda Cifrada de Documentos</h3>
+            <p>Almacenamiento inmutable para soportes contables, facturas y declaraciones previas.</p>
+            <ul class="feature-details">
+              <li>Cifrado en reposo AES-256</li>
+              <li>Indexación de metadatos fiscales</li>
+              <li>Trazabilidad total contra solicitudes de auditoría</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. Buzón de Ideas -->
+    <section id="buzon-ideas" class="home-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Retroalimentación Técnica</span>
+          <h2>Buzón de Ideas y Requerimientos</h2>
+          <p class="section-desc">Canal directo para proponer integraciones, reglas fiscales o mejoras de arquitectura.</p>
+        </div>
+
+        <div class="contact-container">
+          <div class="contact-info">
+            <h3>Evolución Colaborativa</h3>
+            <p>
+              Este gestor se concibe como una plataforma viva. Las sugerencias registradas pasan directamente al backlog de arquitectura para priorización según impacto fiscal y viabilidad técnica.
+            </p>
+            <div class="contact-info-list">
+              <div class="contact-info-item">
+                <strong>Revisión de Casos</strong>
+                <span>Sprints quincenales de despliegue</span>
+              </div>
+              <div class="contact-info-item">
+                <strong>Disponibilidad de Integración</strong>
+                <span>APIs abiertas en etapa Alpha</span>
+              </div>
+            </div>
+          </div>
+
+          <form class="contact-form" id="contact-form" novalidate>
+            <div id="form-feedback" style="display: none;"></div>
+
+            <div class="form-grid">
+              <div class="form-group">
+                <label for="nombre">Nombre Completo *</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Ej. Carlos Mendoza" required>
+              </div>
+
+              <div class="form-group">
+                <label for="correo">Correo Corporativo / Personal *</label>
+                <input type="email" id="correo" name="correo" placeholder="carlos@empresa.com" required>
+              </div>
+
+              <div class="form-group">
+                <label for="tipoUsuario">Perfil Operativo</label>
+                <select id="tipoUsuario" name="tipoUsuario">
+                  <option value="persona_natural">Persona Natural Declarante</option>
+                  <option value="contador">Contador / Revisor Fiscal</option>
+                  <option value="pyme">Empresa / PYME</option>
+                  <option value="desarrollador">Desarrollador / Integrador</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="categoria">Área de la Propuesta</label>
+                <select id="categoria" name="categoria">
+                  <option value="declaracion_renta">Motor de Renta &amp; Impuestos</option>
+                  <option value="integracion_bancaria">Conexiones Bancarias (Open Finance)</option>
+                  <option value="seguridad">Seguridad &amp; Cifrado</option>
+                  <option value="ux_ui">Experiencia de Usuario / Reportes</option>
+                  <option value="otra">Otra Funcionalidad</option>
+                </select>
+              </div>
+
+              <div class="form-group form-group--full">
+                <label for="tituloPropuesta">Título Corto del Requerimiento</label>
+                <input type="text" id="tituloPropuesta" name="tituloPropuesta" placeholder="Ej. Integración con API de Certificados de Retención">
+              </div>
+
+              <div class="form-group form-group--full">
+                <label for="descripcion">Detalle de la Funcionalidad *</label>
+                <textarea id="descripcion" name="descripcion" rows="4" placeholder="Explica qué problema resuelve, datos de entrada necesarios y el resultado esperado..." required></textarea>
+              </div>
+
+              <div class="form-group form-group--full">
+                <label for="impactoEstimado">Impacto Esperado</label>
+                <select id="impactoEstimado" name="impactoEstimado">
+                  <option value="alto">Alto (Ahorro crítico de tiempo o cálculo clave)</option>
+                  <option value="medio">Medio (Mejora operativa recurrente)</option>
+                  <option value="bajo">Bajo (Conveniencia o detalle estético)</option>
+                </select>
+              </div>
+            </div>
+
+            <button type="submit" class="btn-submit" id="submit-btn">
+              Registrar Propuesta
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-container">
+      <div class="footer-col footer-col--brand">
+        <div class="footer-brand">
+          <span class="brand-primary">Tax</span>
+          <span class="brand-light">Manager</span>
+        </div>
+        <p class="footer-description">
+          Plataforma integral de gestión financiera y liquidación automatizada de rentas bajo arquitectura distribuida.
+        </p>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-title">Navegación</h4>
+        <ul class="footer-list">
+          <li><a href="#presentacion" class="footer-link">Presentación</a></li>
+          <li><a href="#funcionalidades" class="footer-link">Alcance &amp; Declaración</a></li>
+          <li><a href="#buzon-ideas" class="footer-link">Buzón de Ideas</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-title">Tecnología</h4>
+        <ul class="footer-list">
+          <li><span class="footer-static-item">Microservicios API</span></li>
+          <li><span class="footer-static-item">Motor de Cálculo Fiscal</span></li>
+          <li><span class="footer-static-item">Seguridad &amp; Encriptación</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container footer-bottom-container">
+        <p class="footer-copy">
+          &copy; <span id="current-year"></span> TaxManager. Todos los derechos reservados.
+        </p>
+        <div class="footer-credits">
+          <span>Desarrollado por </span>
+          <a 
+            href="https://github.com/EstebanRubiano" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            class="developer-link"
+            aria-label="Perfil de GitHub de Esteban Rubiano"
+          >
+            Esteban Rubiano
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- SCRIPTS DOM NATIVO -->
+  <script>
+    (function () {
+      // 1. Header scroll & mobile toggle
+      const header = document.getElementById('site-header');
+      const toggleBtn = document.getElementById('menu-toggle');
+      const nav = document.getElementById('primary-navigation');
+      const navLinks = document.querySelectorAll('.nav-link, .btn-cta, #brand-link');
+
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 20) {
+          header.classList.add('site-header--scrolled');
+        } else {
+          header.classList.remove('site-header--scrolled');
+        }
+      }, { passive: true });
+
+      const closeMenu = () => {
+        nav.classList.remove('header-nav--open');
+        toggleBtn.classList.remove('menu-toggle--active');
+        toggleBtn.setAttribute('aria-expanded', 'false');
+        toggleBtn.setAttribute('aria-label', 'Abrir navegación');
+        document.body.style.overflow = '';
+      };
+
+      const openMenu = () => {
+        nav.classList.add('header-nav--open');
+        toggleBtn.classList.add('menu-toggle--active');
+        toggleBtn.setAttribute('aria-expanded', 'true');
+        toggleBtn.setAttribute('aria-label', 'Cerrar navegación');
+        document.body.style.overflow = 'hidden';
+      };
+
+      toggleBtn.addEventListener('click', () => {
+        const isOpen = nav.classList.contains('header-nav--open');
+        isOpen ? closeMenu() : openMenu();
+      });
+
+      navLinks.forEach(link => link.addEventListener('click', closeMenu));
+
+      window.addEventListener('resize', () => {
+        if (window.innerWidth > 768 && nav.classList.contains('header-nav--open')) {
+          closeMenu();
+        }
+      });
+
+      // 2. Footer year
+      const yearEl = document.getElementById('current-year');
+      if (yearEl) {
+        yearEl.textContent = new Date().getFullYear();
+      }
+
+      // 3. Form submission
+      const form = document.getElementById('contact-form');
+      const submitBtn = document.getElementById('submit-btn');
+      const feedback = document.getElementById('form-feedback');
+
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+
+        const nombre = form.nombre.value.trim();
+        const correo = form.correo.value.trim();
+        const descripcion = form.descripcion.value.trim();
+
+        if (!nombre || !correo || !descripcion) {
+          feedback.className = 'form-alert form-alert--danger';
+          feedback.textContent = 'Por favor complete todos los campos obligatorios (*).';
+          feedback.style.display = 'block';
+          return;
+        }
+
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Enviando Requerimiento...';
+
+        setTimeout(() => {
+          try {
+            const data = {
+              nombre,
+              correo,
+              tipoUsuario: form.tipoUsuario.value,
+              categoria: form.categoria.value,
+              tituloPropuesta: form.tituloPropuesta.value.trim(),
+              descripcion,
+              impactoEstimado: form.impactoEstimado.value,
+              id: Date.now(),
+              fecha: new Date().toISOString()
+            };
+
+            const stored = JSON.parse(localStorage.getItem('fintech_propuestas') || '[]');
+            stored.push(data);
+            localStorage.setItem('fintech_propuestas', JSON.stringify(stored));
+
+            feedback.className = 'form-alert form-alert--success';
+            feedback.textContent = 'Propuesta registrada exitosamente en el buzón técnico.';
+            feedback.style.display = 'block';
+            form.reset();
+          } catch (err) {
+            feedback.className = 'form-alert form-alert--danger';
+            feedback.textContent = 'Error local al guardar la información.';
+            feedback.style.display = 'block';
+          } finally {
+            submitBtn.disabled = false;
+            submitBtn.textContent = 'Registrar Propuesta';
+          }
+        }, 800);
+      });
+    })();
+  </script>
+
+</body>
+</html>

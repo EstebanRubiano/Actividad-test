@@ -1,0 +1,82 @@
+:root {
+  /* Marca principal (Fintech moderno: azul pizarra profundo y balanceado) */
+  --color-brand-primary: #1e3a8a;
+  --color-brand-primary-hover: #1d4ed8;
+  --color-brand-primary-dark: #0f172a;
+  --color-brand-accent-soft: #eff6ff;
+
+  /* Call To Action (Esmeralda sobrio para acciones financieras) */
+  --color-cta: #059669;
+  --color-cta-hover: #047857;
+  --color-cta-contrast: #ffffff;
+
+  /* Fondos livianos */
+  --color-bg-base: #ffffff;
+  --color-bg-subtle: #f8fafc;
+  --color-bg-surface: #ffffff;
+  --color-bg-sidebar: #0f172a;
+
+  /* Tipografía */
+  --font-family-base: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  
+  /* Textos legibles y desaturados */
+  --color-text-title: #0f172a;
+  --color-text-body: #334155;
+  --color-text-muted: #64748b;
+  --color-text-placeholder: #94a3b8;
+  --color-text-inverse: #ffffff;
+
+  /* Escala tipográfica */
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.875rem;
+  --font-size-md: 1rem;
+  --font-size-lg: 1.125rem;
+  --font-size-xl: 1.25rem;
+  --font-size-2xl: 1.5rem;
+  --font-size-3xl: 2rem;
+
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  --line-height-base: 1.5;
+  --line-height-tight: 1.25;
+
+  /* Estados operativos (Tonos pastel desaturados) */
+  --color-status-success: #10b981;
+  --color-status-success-bg: #ecfdf5;
+  --color-status-success-text: #065f46;
+
+  --color-status-warning: #f59e0b;
+  --color-status-warning-bg: #fffbeb;
+  --color-status-warning-text: #92400e;
+
+  --color-status-danger: #ef4444;
+  --color-status-danger-bg: #fef2f2;
+  --color-status-danger-text: #991b1b;
+
+  --color-status-info: #0284c7;
+  --color-status-info-bg: #f0f9ff;
+  --color-status-info-text: #075985;
+
+  /* Delimitadores refinados */
+  --border-color-default: #e2e8f0;
+  --border-color-light: #f1f5f9;
+  --border-color-focus: #2563eb;
+
+  /* Espaciados */
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+  --spacing-xl: 2rem;
+
+  /* Bordes y elevación */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+
+  --max-width-layout: 1200px;
+  --shadow-card: 0 1px 3px 0 rgba(0, 0, 0, 0.05), 0 1px 2px -1px rgba(0, 0, 0, 0.05);
+}
