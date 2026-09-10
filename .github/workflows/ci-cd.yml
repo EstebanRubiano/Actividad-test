@@ -80,6 +80,9 @@ jobs:
 
       - name: Configurar GitHub Pages
         uses: actions/configure-pages@v5
+        with:
+          enablement: true
+          token: ${{ secrets.PAGES_TOKEN || github.token }}
 
       - name: Subir a GitHub Pages
         uses: actions/upload-pages-artifact@v3
