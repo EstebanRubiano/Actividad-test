@@ -65,9 +65,9 @@ jobs:
     if: github.event_name == 'push' && github.ref == 'refs/heads/main'
 
     permissions:
+      contents: read
       pages: write
       id-token: write
-      actions: read
 
     environment:
       name: github-pages
@@ -82,9 +82,6 @@ jobs:
 
       - name: Configurar GitHub Pages
         uses: actions/configure-pages@v6
-        with:
-          enablement: true
-          token: ${{ secrets.PAGES_TOKEN }}
 
       - name: Subir a GitHub Pages
         uses: actions/upload-pages-artifact@v5
