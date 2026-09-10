@@ -16,10 +16,10 @@ jobs:
 
     steps:
       - name: Checkout del codigo
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Instalar Node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v5
         with:
           node-version: '18'
           cache: 'npm'
@@ -37,10 +37,10 @@ jobs:
 
     steps:
       - name: Checkout del codigo
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Instalar Node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v5
         with:
           node-version: '18'
           cache: 'npm'
@@ -52,7 +52,7 @@ jobs:
         run: npm run build
 
       - name: Subir artefacto del build
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v6
         with:
           name: dist
           path: dist/
@@ -66,6 +66,7 @@ jobs:
     permissions:
       pages: write
       id-token: write
+      actions: read
 
     environment:
       name: github-pages
@@ -73,22 +74,19 @@ jobs:
 
     steps:
       - name: Descargar artefacto del build
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v5
         with:
           name: dist
           path: dist/
 
       - name: Configurar GitHub Pages
-        uses: actions/configure-pages@v5
-        with:
-          enablement: true
-          token: ${{ secrets.PAGES_TOKEN || github.token }}
+        uses: actions/configure-pages@v6
 
       - name: Subir a GitHub Pages
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v4
         with:
           path: dist/
 
       - name: Desplegar a GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v5
